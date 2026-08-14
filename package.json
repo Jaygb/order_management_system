@@ -15,7 +15,8 @@
     "test:client": "npm run test --workspace=client",
     "test": "npm run test:server && npm run test:client",
     "build:client": "npm run build --workspace=client",
-    "build": "npm run build:client"
+    "build": "npm run build:client",
+    "start": "npm run start --workspace=server"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
