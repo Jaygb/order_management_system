@@ -27,6 +27,14 @@ app.use(express.json());
 // Register API Routes
 app.use('/api/v1', router);
 
+// Health check
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'BiteDash API is running',
+  });
+});
+
 // Catch-all route handler for undefined endpoints
 app.use((req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
